@@ -1,0 +1,25 @@
+{
+  "cli_version": "0.7.7",
+  "checkpoint_id": "fa1a628df2e9",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "docs/superpowers/specs/2026-06-29-tetris-design.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/fa/1a628df2e9/0/metadata.json",
+      "transcript": "/fa/1a628df2e9/0/full.jsonl",
+      "content_hash": "/fa/1a628df2e9/0/content_hash.txt",
+      "prompt": ""
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 5922,
+    "cache_read_tokens": 210433,
+    "output_tokens": 1966,
+    "api_call_count": 5
+  }
+}
