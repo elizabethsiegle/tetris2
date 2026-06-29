@@ -1,0 +1,661 @@
+1
+
+---
+
+<task-notification>
+<task-id>add20d4b4664bab3b</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/add20d4b4664bab3b.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 1 implementer: project scaffold" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>**Status:** DONE
+
+**Commit:** b646140
+
+**Test result:** `npm test` — No test files found (expected for scaffold; Vitest configured correctly)
+
+**Concerns:** None. All scaffold files written exactly as specified in brief and committed.</result>
+<usage><subagent_tokens>19294</subagent_tokens><tool_uses>13</tool_uses><duration_ms>557954</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a67d535d4957489a9</task-id>
+<tool-use-id>toolu_01HmuDuVsM1N7umR8kiZEXCP</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a67d535d4957489a9.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 1 reviewer: scaffold" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Now I'll verify the constraints against the actual diff:
+
+**Spec Compliance Checklist:**
+
+1. ✅ `package.json` has react@^18, vite@^5, tailwindcss@^3, vitest@^1
+   - react: ^18.3.1 ✅
+   - vite: ^5.4.10 ✅
+   - tailwindcss: ^3.4.14 ✅
+   - vitest: ^1.6.0 ✅
+
+2. ✅ `vite.config.js` uses @vitejs/plugin-react — present and imported
+
+3. ✅ `tailwind.config.js` content includes ./src/**/*.{js,jsx} — has both './index.html' and './src/**/*.{js,jsx}'
+
+4. ✅ `postcss.config.js` has tailwindcss and autoprefixer — both present
+
+5. ✅ `src/index.css` has @tailwind base/components/utilities directives — all three present
+
+6. ✅ `src/main.jsx` renders App into #root with React.StrictMode — correct
+
+7. ✅ `src/App.jsx` renders a Tetris component — imports and renders `&lt;Tetris /&gt;`
+
+8. ✅ All 8 files created as specified in brief
+
+**Findings:**
+
+- **Critical:** None detected
+- **Important:** None detected  
+- **Minor:** None detected
+
+---
+
+## Verdicts
+
+**1. Spec Compliance:** ✅ All requirements met
+
+**2. Task Quality:** **Approved**
+
+All files created exactly as specified in the brief. Package versions meet constraints. All configuration files properly set up. React rendering with StrictMode correct. App component properly imports Tetris placeholder. Brief commit message follows convention. Test command would correctly report "no test files" (expected for scaffold stage).</result>
+<usage><subagent_tokens>17881</subagent_tokens><tool_uses>3</tool_uses><duration_ms>7024</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a775580fd7263dfe9</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a775580fd7263dfe9.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 2 implementer: constants" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Summary
+
+**Status:** DONE
+
+**Commit Hash:** df6e4ac
+
+**Test Summary:** All 5 tests passed - board dimensions (10x20), 7 piece types, color mapping (0-7), score table, and gravity delay calculation
+
+**Concerns:** None. Implementation matches specification exactly.</result>
+<usage><subagent_tokens>17710</subagent_tokens><tool_uses>7</tool_uses><duration_ms>17626</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>acef04681e9497140</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/acef04681e9497140.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 2 reviewer: constants" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Review Summary
+
+**Spec compliance:** ✅ All requirements met
+
+All constraints are satisfied:
+- BOARD_COLS=10, BOARD_ROWS=20 exported as named constants ✓
+- PIECE_TYPES array has exactly 7 entries: ['I', 'O', 'T', 'S', 'Z', 'J', 'L'] ✓
+- COLORS[0]=null, COLORS[1]='bg-cyan-400', COLORS[7]='bg-orange-500' ✓
+- SCORE_TABLE[1]=100, SCORE_TABLE[2]=300, SCORE_TABLE[3]=500, SCORE_TABLE[4]=800 ✓
+- gravityDelay formula correct: Math.max(100, 1000 - (level-1)*90) producing gravityDelay(1)=1000, gravityDelay(10)=190, gravityDelay(20)=100 ✓
+- Both src/constants.js and src/constants.test.js created ✓
+- All 5 tests pass (verified by report) ✓
+
+**Task quality:** Approved
+
+The implementation matches the brief exactly, all tests pass, and the report confirms clean verification with no concerns. Code is minimal and correct.
+
+**Findings:** None — no issues to report.</result>
+<usage><subagent_tokens>16950</subagent_tokens><tool_uses>3</tool_uses><duration_ms>6402</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a6efdf70ca996ae24</task-id>
+<tool-use-id>toolu_014WV8MsiucyY4VSy4CdwTrk</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a6efdf70ca996ae24.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 3 implementer: tetrominoes" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>---
+
+**Status: DONE**
+
+**Commit hash:** `fe5ba5c`
+
+**Test summary:** 13/13 tests pass across 2 test files (5 constants + 8 tetrominoes), all green.
+
+**Concerns:** None. Implementation matches the brief exactly — I-piece rotation 0 is horizontal (all cells at bounding-box row 1), O-piece has 4 identical rotations, spawnPiece returns y=-1 for I-piece so the topmost cell lands at board row 0, and SRS wall kick tables use the standard "from-&gt;to" key format with dx/dy offsets where positive dy is downward.</result>
+<usage><subagent_tokens>24286</subagent_tokens><tool_uses>10</tool_uses><duration_ms>344041</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>af091650e23dee5ad</task-id>
+<tool-use-id>toolu_0196BVpJKBMt81hkJRExxdRq</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/af091650e23dee5ad.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 3 reviewer: tetrominoes" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Now I have everything needed. Let me verify the T-piece rotation 1 shape against the brief's test assertion, and cross-check the wall kick tables against standard SRS.
+
+The brief's test for `getPieceCells('T', 0, 3, 5)` expects `[5, 4]` and `[6, 3]`. T rotation 0 is `[[0,1],[1,0],[1,1],[1,2]]`. With x=3, y=5: `[5+0, 3+1]=[5,4]` and `[5+1, 3+0]=[6,3]`. Correct.
+
+T rotation 1 in the diff: `[[0,1],[1,1],[1,2],[2,1]]`. This is wrong for standard SRS — T rotation 1 (clockwise from spawn) should be the "pointing right" shape: `[[0,1],[1,1],[1,2],[2,1]]` — wait, let me verify that carefully. Standard T-piece rotation 1 (clockwise) is: top-center, mid-center, mid-right, bottom-center. That's `[0,1],[1,1],[1,2],[2,1]` — that matches. Actually that's the standard "T pointing right" shape. Good.
+
+Now let me check the WALL_KICKS export structure. The brief says `WALL_KICKS` keyed by type (`[type]`), but the implementation exports `{ I: I_KICKS, JLSTZ: JLSTZ_KICKS }`. This means `WALL_KICKS['T']` would be undefined — consumers need to know to use `'JLSTZ'` as the key. The brief specifies `JLSTZ_KICKS` and `I_KICKS` as named tables, and the interface just says `WALL_KICKS`. The exported structure uses `JLSTZ` as the group key rather than individual piece types, which is a deviation from the global constraint: "JLSTZ_KICKS and I_KICKS, keyed 'N-&gt;M'..." — the global constraint names the tables but doesn't mandate `WALL_KICKS` be keyed per piece-type. The `tryRotate` function internally accesses `I_KICKS` and `JLSTZ_KICKS` directly (not through `WALL_KICKS`), so this is only a concern for external consumers.
+
+The O-piece has `size: 2` — the global constraint says size can be 2/3/4, and O is 2x2, so that's fine. Let me also note that `collides` does not export `collides` from the module explicitly in the diff — checking: yes it does, `export function collides(...)`.
+
+One thing to check: the brief's interface lists `WALL_KICKS` as a named export but doesn't mandate per-piece-type keying. The global constraints say the tables are named `JLSTZ_KICKS` and `I_KICKS`. The implementation exports `WALL_KICKS = { I: I_KICKS, JLSTZ: JLSTZ_KICKS }` which groups them. This is acceptable as an implementation detail.
+
+---
+
+**Spec compliance: APPROVED with one minor note**
+
+All requirements are met:
+
+- PIECES: 7 types (I O T S Z J L), colors 1-7, correct sizes (I=4, O=2, others=3), 4 rotations each with 4 [row,col] cells. I rotation 0 all share row=1 (horizontal). O all 4 rotations identical.
+- Wall kick tables: `JLSTZ_KICKS` and `I_KICKS` both present with all 8 rotation-pair keys (`0-&gt;1`, `1-&gt;0`, `1-&gt;2`, `2-&gt;1`, `2-&gt;3`, `3-&gt;2`, `3-&gt;0`, `0-&gt;3`), each with 5 `[dx,dy]` offsets. Values match standard SRS.
+- `getPieceCells`: correctly applies `[y+dr, x+dc]` offsets.
+- `collides`: rows &lt; 0 allowed, rows &gt;= 20 or cols out of 0-9 block, occupied cells block.
+- `computeGhostY`: increments y until collision below.
+- `spawnPiece`: x = `Math.floor((BOARD_COLS - size) / 2)`, y = `-minRow`.
+- `tryRotate`: clockwise only, tries all 5 kick offsets in order, returns first non-colliding result or null.
+- 13/13 tests pass per report (5 constants + 8 tetrominoes).
+
+---
+
+**Spec compliance: All requirements met**
+
+**Task quality: Approved**
+
+**Findings:**
+
+Minor — The `WALL_KICKS` export uses `{ I: I_KICKS, JLSTZ: JLSTZ_KICKS }` rather than per-piece-type keys (so `WALL_KICKS['T']` is undefined). `tryRotate` correctly bypasses this by referencing `I_KICKS`/`JLSTZ_KICKS` directly, so game logic is unaffected. If a downstream task expects `WALL_KICKS[type]` to work for all 7 piece types, this will need adjustment. Worth flagging for the consuming task author but not a blocker.
+
+Minor — `tryRotate` only supports clockwise rotation. Counter-clockwise is not in scope for this task but worth noting if the game needs it later.
+
+No correctness bugs found. Shape data, wall kick tables, and all helper functions are correctly implemented and match SRS. Tests are well-structured and cover the key behaviors specified in the brief.</result>
+<usage><subagent_tokens>22745</subagent_tokens><tool_uses>3</tool_uses><duration_ms>31569</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a740d7c6829b65490</task-id>
+<tool-use-id>toolu_01LKv9byNiWVSMfS6SSNrcxf</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a740d7c6829b65490.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 4 implementer: game reducer" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>**Status:** DONE
+
+**Commit hash:** `776cce7`
+
+**Test summary:** 27/27 tests pass (5 constants + 8 tetrominoes + 14 reducer).
+
+**Concerns:** One deviation from the brief's exact code was necessary. The `afterLock` score line `SCORE_TABLE[linesCleared] * level` produces `NaN` when `linesCleared &gt; 4` (SCORE_TABLE only covers 1–4). The line-clearing test constructs a state with 19 pre-filled rows and a stale `ghostY`, causing 19 lines to clear at once and hitting `SCORE_TABLE[19] = undefined`. Fixed with `SCORE_TABLE[linesCleared] ?? SCORE_TABLE[4]` — a defensive fallback that has no effect on normal gameplay since Tetris can never clear more than 4 lines in a single lock.</result>
+<usage><subagent_tokens>32553</subagent_tokens><tool_uses>15</tool_uses><duration_ms>701089</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a1f369a17f066dbfb</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a1f369a17f066dbfb.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 4 reviewer: game reducer" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>**Spec compliance: all requirements met**
+
+Every required export, action, and behavioral contract is present and correct:
+
+- `INITIAL_STATE` exports with `phase='idle'`, 20x10 zero board, `activePiece=null`
+- `gameReducer(state, action)` exported correctly
+- All 8 actions implemented: START, TICK, MOVE_LEFT, MOVE_RIGHT, SOFT_DROP, HARD_DROP, ROTATE, PAUSE
+- START fully resets state, creates a fresh 7-bag, spawns first piece, sets `phase='playing'`
+- PAUSE toggles playing/paused; non-START/PAUSE actions are no-ops outside `phase='playing'`
+- TICK moves down 1 or calls `afterLock` on collision
+- MOVE_LEFT/RIGHT move or no-op on collision; both recompute ghostY
+- SOFT_DROP moves down 1 or locks; awards `score += 1` per row dropped
+- HARD_DROP teleports to ghostY, awards `score += dropped * 2`, then locks
+- ROTATE delegates to `tryRotate` (SRS) and updates piece or no-ops
+- `afterLock` sequence is correct: lockPiece -&gt; clearLines -&gt; score with level-before-clear -&gt; newLines/newLevel -&gt; spawnPiece(nextPiece) -&gt; drawFromBag -&gt; gameover check on collision at spawn
+- 7-bag shuffled, refills when empty, nextPiece shown in preview
+- ghostY recomputed on every piece-position change
+- 14 reducer tests pass (27 total across all files)
+
+The one deviation (`SCORE_TABLE[linesCleared] ?? SCORE_TABLE[4]`) is correctly disclosed, benign in normal gameplay, and pre-approved per the review instructions.
+
+---
+
+**Findings**
+
+Minor: The `TICK` case does not update `ghostY` when the piece successfully moves down (line 189 of the diff). Ghost Y does not change during a downward move since it is always below the current y, so this is functionally correct -- but it is a subtle asymmetry vs. SOFT_DROP (which does recompute ghostY on move). In practice ghostY only needs updating when x, rotation, or board changes, so this is not a defect.
+
+Minor: The gameover path in `afterLock` (line 83) spreads `...state` which includes the stale `activePiece` and `ghostY` from before the lock. Downstream consumers reading `activePiece` in gameover phase will see the unspawned next piece's data rather than null. This is not covered by any test and is unlikely to matter if the UI gates on `phase === 'gameover'`, but it is a minor inconsistency.
+
+---
+
+**Task quality: Approved**
+
+The implementation is clean, idiomatic, and fully faithful to the brief. The single deviation is a genuine improvement (prevents NaN in a contrived test-setup scenario), was correctly disclosed, and does not affect real gameplay. All 14 specified reducer tests pass. No blocking issues.</result>
+<usage><subagent_tokens>25216</subagent_tokens><tool_uses>3</tool_uses><duration_ms>22614</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a0ca05e2e3de9e166</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a0ca05e2e3de9e166.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 5 implementer: hooks" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Task 5 Complete
+
+**Status:** DONE
+
+**Commit:** 9ae8f7f
+
+**Test Summary:** All 27 existing tests pass (5 constants, 8 tetrominoes, 14 gameReducer).
+
+**Concerns:** None. Both hooks implemented exactly to spec — useGameLoop handles level-based gravity timing with proper ref handling, useInput maps 11 keys to 6 action types with preventDefault. No tests required for hooks (DOM environment constraint).</result>
+<usage><subagent_tokens>18132</subagent_tokens><tool_uses>10</tool_uses><duration_ms>21405</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>aa6c485ebb23fbc7b</task-id>
+<tool-use-id>toolu_01EJQYGeyizYr3ctVZPQxPob</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/aa6c485ebb23fbc7b.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 5 reviewer: hooks" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Review Summary
+
+**Specification Compliance Analysis:**
+
+Checking against the three global constraints:
+
+1. **useGameLoop(dispatch, phase, level):**
+   - ✅ Fires `dispatch({type:'TICK'})` on interval
+   - ✅ Only active when `phase==='playing'` (line 11)
+   - ✅ Uses `useRef` for dispatch to avoid stale closure (lines 7-8)
+   - ✅ Re-creates interval when phase or level changes (dependency array: `[phase, level]` at line 14)
+   - ✅ Imports `gravityDelay` from `../constants.js` (line 2)
+
+2. **useInput(dispatch):**
+   - ✅ Attaches keydown listener to window on mount (line 26)
+   - ✅ Removes on unmount via cleanup function (line 27)
+   - ✅ Maps all 11 keys correctly: ArrowLeft→MOVE_LEFT, ArrowRight→MOVE_RIGHT, ArrowDown→SOFT_DROP, ArrowUp→ROTATE, x/X→ROTATE, ' '→HARD_DROP, p/P→PAUSE, r/R→START
+   - ✅ Calls `e.preventDefault()` for mapped keys (line 23)
+
+3. **File location &amp; Tests:**
+   - ✅ Both files in `src/hooks/`
+   - ✅ Report confirms all 27 prior tests still pass
+
+---
+
+## Verdicts
+
+**1. Spec Compliance:** ✅ **All requirements met**
+- Both hooks match the brief exactly
+- All constraint parameters implemented correctly
+- File placement correct
+- Existing tests unaffected
+
+**2. Task Quality:** **Approved**
+
+**Findings:**
+
+- **Minor:** The brief specifies `useInput(dispatch, phase)` in the Interfaces section (line 9), but the actual signature is `useInput(dispatch)` with no `phase` parameter. The implementation is correct per the Step 2 code spec, but there's an inconsistency in the brief documentation. This doesn't affect functionality—the implementation is what matters and it's correct.
+
+- **All implementation details are solid:** proper React hook patterns, correct cleanup, appropriate dependencies, clear KEY_MAP for maintainability.</result>
+<usage><subagent_tokens>17310</subagent_tokens><tool_uses>5</tool_uses><duration_ms>9912</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a8a58b6247d0d0ac2</task-id>
+<tool-use-id>toolu_0118vLH13f1fQYza897eATLa</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a8a58b6247d0d0ac2.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 6 implementer: Board component" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Summary
+
+**Status:** DONE
+
+**Commit:** `abf0fce`
+
+**Test Result:** All 27 tests pass (5 constants, 8 tetrominoes, 14 gameReducer)
+
+**Concerns:** None
+
+I've successfully implemented Task 6 by creating the Board component at `/src/components/Board.jsx`. The component renders the 10×20 Tetris grid with proper layering of locked cells, ghost piece (landing preview), and the active falling piece. The implementation uses static Tailwind color lookup tables to avoid dynamic class composition issues, and follows the specification exactly.</result>
+<usage><subagent_tokens>22486</subagent_tokens><tool_uses>12</tool_uses><duration_ms>30465</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a4b139c01dc15e855</task-id>
+<tool-use-id>toolu_01VkcPUkZoDDcFnLyAFa3kcu</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a4b139c01dc15e855.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 6 reviewer: Board component" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Perfect. Now let me verify the key specification details:
+
+**Spec Compliance Verification:**
+
+1. ✅ Props match: `board` (number[][]), `activePiece` ({type,rotation,x,y}), `ghostY` (number)
+2. ✅ CSS grid: `gridTemplateColumns: repeat(${BOARD_COLS}, 1.75rem)` with `w-7 h-7` cells
+3. ✅ buildDisplayGrid correctly: copies board → overlays ghost → overlays active piece
+4. ✅ Ghost cells: only render on empty positions (color === 0), use GHOST_CLASSES with `bg-transparent`
+5. ✅ Active/locked cells: use SOLID_CLASSES with solid fill
+6. ✅ Empty cells: `bg-gray-800 border border-gray-700`
+7. ✅ SOLID_CLASSES &amp; GHOST_CLASSES: static objects with integer keys 1-7 (no dynamic Tailwind)
+8. ✅ getPieceCells &amp; PIECES: imported correctly from tetrominoes.js
+9. ✅ Rows &lt; 0 handling: `if (r &gt;= 0 &amp;&amp; ...)` filters out above-visible cells in both ghost and active loops
+10. ✅ All 27 tests pass
+
+**Code Quality Check:**
+
+- Grid copy is correct: `board.map(row =&gt; row.map(cell =&gt; ({ color: cell, ghost: false })))`
+- Layering order correct: Ghost cells added first, then active (active overwrites with `grid[r][c] = ...`)
+- Bounds checking: All cell placements check `r &gt;= 0 &amp;&amp; r &lt; BOARD_ROWS &amp;&amp; c &gt;= 0 &amp;&amp; c &lt; BOARD_COLS`
+- Ghost condition: `grid[r][c].color === 0` ensures ghosts only on empty cells
+- cellClass logic: Clear branching (0 → empty, ghost true → ghost outline, else → solid)
+- Imports: All necessary constants and functions imported
+- Component is pure presentational (no state, no side effects)
+
+---
+
+## Verdicts
+
+**1. Spec Compliance: ✅ All requirements met**
+
+All 10 constraints are satisfied. The component correctly builds a display grid with proper layering, uses static Tailwind lookups, handles bounds checking for above-board cells, and maintains all test coverage.
+
+**2. Task Quality: Approved**
+
+The implementation is clean, follows the specification exactly, and demonstrates solid engineering:
+- Proper separation of concerns (buildDisplayGrid, cellClass)
+- Correct layering semantics (locked → ghost → active)
+- Smart bounds handling to prevent rendering above-board cells
+- All 27 prior tests pass with no regressions
+
+No findings. Task is complete and ready.</result>
+<usage><subagent_tokens>19076</subagent_tokens><tool_uses>6</tool_uses><duration_ms>14642</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a83e8a2c1309603c3</task-id>
+<tool-use-id>toolu_01LGRzZvRyLzxDbb3EHEVqLm</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a83e8a2c1309603c3.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 7 implementer: NextPiece + Sidebar" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>## Report
+
+**Status:** DONE
+
+**Commit:** 78d7928
+
+**Tests:** All 27 tests pass (3 files, 100% pass rate)
+
+**Concerns:** None — both components created exactly per spec, all existing tests still pass, ready for integration.</result>
+<usage><subagent_tokens>20532</subagent_tokens><tool_uses>9</tool_uses><duration_ms>22574</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a796aa163af293a1e</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a796aa163af293a1e.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 7 reviewer: NextPiece + Sidebar" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Excellent. Now let me verify the implementation against the specification constraints:
+
+## Compliance Verification
+
+**NextPiece Component:**
+- ✅ Props: `type` (string) — correctly declared
+- ✅ Returns null when falsy — `if (!type) return null;` on line 14
+- ✅ Renders size×size grid — `shapes[0]` for rotation-0, grid generated from `size` × `size` (lines 19-23)
+- ✅ Cell dimensions w-6 h-6 — line 36
+- ✅ Static SOLID_CLASSES mapping 1-7 to Tailwind classes — lines 3-11, used on line 36
+
+**Sidebar Component:**
+- ✅ Props: `score`, `level`, `lines` (numbers), `nextPiece` (string) — line 12
+- ✅ StatRow helper component — lines 3-10 with label + value
+- ✅ Includes NextPiece — line 18
+- ✅ Controls legend with all 6 controls — lines 20-28 (Move, Soft drop, Rotate, Hard drop, Pause, Restart)
+- ✅ Width class w-28 — line 14
+- ✅ Both files in src/components/ — verified
+- ✅ All 27 prior tests still pass — confirmed
+
+---
+
+## Review Summary
+
+**Spec Compliance:** ✅ All requirements met
+
+**Task Quality:** **Approved** — Implementation is exact match to brief specification, code is clean, follows all layout and styling requirements, and all tests pass.
+
+**Findings:**
+- **Minor:** Grid cell background colors are hardcoded as `bg-gray-800` for empty cells. While functional, no hardness issue since spec doesn't prescribe empty cell styling.</result>
+<usage><subagent_tokens>18933</subagent_tokens><tool_uses>6</tool_uses><duration_ms>12456</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a48a0a8e0d0968001</task-id>
+<tool-use-id>toolu_01WNmjuTfHuMFt1nHZEYdho3</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a48a0a8e0d0968001.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 8 implementer: Tetris root component" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>**Status:** DONE
+
+**Commit hash:** 422b390
+
+**Test summary:** 27/27 tests pass (5 constants, 8 tetrominoes, 14 gameReducer)
+
+**Dev server:** Started successfully — Vite reported `Local: http://localhost:5177/` (ports 5173-5176 were already occupied from prior sessions; Vite auto-incremented as expected)
+
+**Concerns:** None. `src/components/Tetris.jsx` was written exactly as specified in the brief — `useReducer` wired to `gameReducer`/`INITIAL_STATE`, both hooks (`useGameLoop`, `useInput`) called with `stableDispatch`, three overlay phases (idle/paused/gameover), centered layout with balancing `w-28` div and `Sidebar` on the right.</result>
+<usage><subagent_tokens>18631</subagent_tokens><tool_uses>11</tool_uses><duration_ms>363510</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>af4c287b0c221c0eb</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/af4c287b0c221c0eb.output</output-file>
+<status>completed</status>
+<summary>Agent "Task 8 reviewer: Tetris root component" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Perfect. I have all the information needed. Let me verify the implementation against the spec.
+
+## Review Summary
+
+### ✅ **Spec Compliance: All Requirements Met**
+
+I've verified each global constraint:
+
+1. **useReducer hook** ✅ — Line 33: `const [state, dispatch] = useReducer(gameReducer, INITIAL_STATE);`
+2. **useGameLoop &amp; useInput** ✅ — Lines 38-39 with proper imports and stableDispatch optimization
+3. **Layout structure** ✅ — Flex row with gap-8, items-start, select-none (line 42); empty w-28 div (line 44); relative Board div (line 47); Sidebar (line 73)
+4. **Board props** ✅ — Line 48: passes `board`, `activePiece`, `ghostY`
+5. **Sidebar props** ✅ — Line 73: passes `score`, `level`, `lines`, `nextPiece`
+6. **Three overlay phases** ✅ — All present with correct text:
+   - idle (lines 50-55): "TETRIS" title + "Press R to start"
+   - paused (lines 57-61): "PAUSED" + "Press P to resume"
+   - gameover (lines 64-70): "GAME OVER" + score display + "Press R to restart"
+7. **Overlay styling** ✅ — Line 26: `absolute inset-0`, `bg-gray-900/80` (semi-transparent dark), centered with flex/justify-center
+8. **Tests pass** ✅ — Report confirms 27/27 tests pass
+9. **Dev server** ✅ — Started successfully (port 5177; auto-incremented due to prior sessions)
+
+---
+
+### **Task Quality: Approved**
+
+**Findings:**
+
+- **Minor** — Layout uses w-28 empty div for balance per spec, which is reasonable for placeholder spacing but could be improved with a more semantic approach in production (e.g., `flex-1` or explicit margin). Not blocking since it matches the brief exactly.
+- **Minor** — Overlay z-10 is hardcoded; if future UI layers are added, z-stack management may need refactoring. No issue given current scope.
+- **Positive** — `useCallback` on dispatch (line 36) is correct defensive optimization pattern for hook dependencies; stableDispatch is properly threaded through both hooks.
+
+**No critical issues.** Implementation is clean, matches the brief line-for-line, all tests pass, dev server confirmed working. Ready to merge.</result>
+<usage><subagent_tokens>17147</subagent_tokens><tool_uses>3</tool_uses><duration_ms>10969</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a7cc0ae6d3ea3c77f</task-id>
+<tool-use-id>toolu_01VxaXXMq49814HKSoCRpQ4r</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a7cc0ae6d3ea3c77f.output</output-file>
+<status>completed</status>
+<summary>Agent "Final whole-branch code review" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Here is the full code review:
+
+---
+
+### Strengths
+
+**Architecture is clean and faithful to the plan.** The single-reducer pattern is correctly executed — all side effects stay outside the reducer, `useGameLoop` and `useInput` are proper thin wrappers, and state transitions are pure and testable.
+
+**SRS wall kick tables are correct.** All 16 transitions (8 for JLSTZ, 8 for I-piece) were verified against the canonical SRS spec. The implementation correctly flips the Y-axis sign to convert from the SRS "Y+ is up" convention to the board's "row 0 is top" convention.
+
+**All 7 piece shapes are correct.** T, J, L, S, Z all render correctly in all 4 rotation states. I-piece is horizontal in rotation 0, vertical in rotation 1. O-piece is identical across all rotations.
+
+**Game logic is sound.** Scoring uses the level value before the level increment (plan requirement), `collides()` correctly allows rows &lt; 0 (above board), `ghostY` correctly skips recompute on TICK (ghostY is an absolute landing row, unaffected by a 1-row downward move), the 7-bag refills correctly when empty, and `spawnPiece` correctly sets `y = -minRow` so the I-piece's top cell lands at board row 0.
+
+**Tailwind class handling is correct.** All color classes are in static lookup tables (`SOLID_CLASSES`, `GHOST_CLASSES`), not constructed dynamically, so Tailwind's static scanner will find them.
+
+**27 tests pass, covering constants, tetrominoes, and the reducer.** Test coverage of pure logic is solid.
+
+---
+
+### Issues
+
+#### Critical (Must Fix)
+
+None.
+
+#### Important (Should Fix)
+
+**Layout deviates from the spec.** The spec says `[Left Sidebar (score/level/lines)] [Board] [Right Sidebar (next piece + controls)]`. The implementation has a placeholder `&lt;div className="w-28" /&gt;` on the left and puts everything (score, level, lines, next piece, controls) in the right sidebar. The placeholder spacer balances the layout visually, but it wastes half the sidebar space and doesn't match the spec. This is low-risk for a demo but a clear plan deviation.
+
+**`SOLID_CLASSES` is duplicated** between `/src/components/Board.jsx` and `/src/components/NextPiece.jsx`. Both define an identical object mapping color indices 1–7 to Tailwind classes. The canonical source already exists at `/src/constants.js` as `COLORS`, but `COLORS` maps `0 -&gt; null` not an empty-cell sentinel, so it can't be used directly. The fix is either to export `SOLID_CLASSES` from `constants.js` or from a shared `colorUtils.js`, not redefine it in two components.
+
+#### Minor (Nice to Have)
+
+**Dead import in `Board.jsx`.** `COLORS` is imported from `constants.js` but never referenced in the component body. The component uses its own `SOLID_CLASSES` and `GHOST_CLASSES` instead. Remove the `COLORS` import.
+
+**Ghost piece renders at full border opacity, not ~30%.** The spec says "outlined, ~30% opacity cells." The implementation renders a solid-colored border with transparent fill (`border-2 border-{color} bg-transparent`). This is visually reasonable (a full-opacity outline clearly shows the ghost) but diverges from the "low-opacity" intent. Adding `opacity-40` to ghost cells would match the spec more closely without breaking the border approach.
+
+**`SOFT_DROP` recomputes `ghostY` unnecessarily.** Moving down by 1 row doesn't change where the piece will land, so recomputing `ghostY` after a soft drop is redundant work. `TICK` correctly skips this recompute. Not a bug, but an inconsistency.
+
+**`useCallback(dispatch, [])` with an empty dependency array** produces a React exhaustive-deps lint warning. `dispatch` from `useReducer` is already a stable reference — the `useCallback` wrapper is unnecessary but harmless. The lint warning can be avoided by removing `useCallback` entirely and passing `dispatch` directly to the hooks.
+
+---
+
+### Assessment
+
+**Ready to merge? Yes**
+
+**Reasoning:** All game logic is correct — SRS kicks, piece shapes, scoring, line clearing, ghostY, and the 7-bag randomizer are all properly implemented and test-verified. The deviations from the spec (layout, ghost opacity, duplicated color table) are cosmetic or structural polish issues, none of which affect gameplay. This is a solid, functional Tetris implementation.</result>
+<usage><subagent_tokens>80763</subagent_tokens><tool_uses>13</tool_uses><duration_ms>446867</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>a90a956d73e079e9d</task-id>
+<tool-use-id>toolu_01PdrnATGfPLYtoTq9D91AiD</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/a90a956d73e079e9d.output</output-file>
+<status>completed</status>
+<summary>Agent "Fix final review findings" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>**Status: DONE**
+
+**Commit hash:** `20eebf6`
+
+**Test summary:** 27/27 tests passed (`npm test -- --run`, 147ms)
+
+Changes made across 5 files:
+
+1. `/Users/lizziesiegle/Desktop/demos-2-idk/tetris2/src/constants.js` — exported `SOLID_CLASSES` as a shared constant
+2. `/Users/lizziesiegle/Desktop/demos-2-idk/tetris2/src/components/Board.jsx` — removed local `SOLID_CLASSES`, removed unused `COLORS` import, added `opacity-40` to ghost cells
+3. `/Users/lizziesiegle/Desktop/demos-2-idk/tetris2/src/components/NextPiece.jsx` — removed local `SOLID_CLASSES`, imports from constants now
+4. `/Users/lizziesiegle/Desktop/demos-2-idk/tetris2/src/components/Sidebar.jsx` — stripped to right-panel only (NextPiece + controls legend)
+5. `/Users/lizziesiegle/Desktop/demos-2-idk/tetris2/src/components/Tetris.jsx` — added inline `StatRow` + left stats panel, removed `useCallback` wrapper around `dispatch`, removed `useCallback` from import</result>
+<usage><subagent_tokens>23580</subagent_tokens><tool_uses>18</tool_uses><duration_ms>73278</duration_ms></usage>
+</task-notification>
+
+---
+
+<task-notification>
+<task-id>ab6cf5936de7cc951</task-id>
+<tool-use-id>toolu_013mWneNDLTTJ3bebrXrTYEf</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-lizziesiegle-Desktop-demos-2-idk-tetris2/fbbffe3a-919a-4013-bd9e-2cceff83bf69/tasks/ab6cf5936de7cc951.output</output-file>
+<status>completed</status>
+<summary>Agent "Re-review: verify fixes applied correctly" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>Perfect. Let me verify the fix checklist:
+
+**Verification Results:**
+
+1. ✅ **SOLID_CLASSES exported from constants.js** — Line 19-27 in `src/constants.js` exports `SOLID_CLASSES`
+2. ✅ **Local SOLID_CLASSES removed from Board.jsx** — Removed from lines 44-52 (now imports from constants at line 1)
+3. ✅ **Local SOLID_CLASSES removed from NextPiece.jsx** — Removed, now imports from constants at line 2
+4. ✅ **Unused COLORS import removed from Board.jsx** — Changed to import SOLID_CLASSES instead (line 1)
+5. ✅ **Left side shows score/level/lines** — Tetris.jsx lines 34-39 render left panel with three StatRow components
+6. ✅ **Sidebar shows only next piece + controls** — Sidebar.jsx now has only `nextPiece` prop, StatRow removed, score/level/lines props gone
+7. ✅ **Ghost cells have opacity-40** — Board.jsx line 43 adds `opacity-40` class to ghost cells
+8. ✅ **useCallback removed from Tetris.jsx** — Import removed (line 1), stableDispatch removed (lines 29-30 now use dispatch directly)
+9. ✅ **All 27 tests pass** — Test output confirms all tests pass
+
+---
+
+## Verdicts:
+
+**1. All fixes applied correctly?** ✅ Yes — All four issues (Important 1-2, Minor 1-2) properly implemented.
+
+**2. Ready to merge?** ✅ Yes — Tests pass, layout matches spec, code is clean, all review feedback addressed.</result>
+<usage><subagent_tokens>22380</subagent_tokens><tool_uses>8</tool_uses><duration_ms>12342</duration_ms></usage>
+</task-notification>
+
+---
+
+1
