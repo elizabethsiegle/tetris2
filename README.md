@@ -2,8 +2,6 @@
 
 A complete, playable Tetris game built with Vite + React + Tailwind CSS.
 
-![Tetris game screenshot](https://github.com/elizabethsiegle/tetris2/blob/main/screenshot.png?raw=true)
-
 ## Getting Started
 
 ```bash
