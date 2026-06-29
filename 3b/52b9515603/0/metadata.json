@@ -1,0 +1,80 @@
+{
+  "cli_version": "0.7.7",
+  "checkpoint_id": "3b52b9515603",
+  "session_id": "fbbffe3a-919a-4013-bd9e-2cceff83bf69",
+  "strategy": "manual-commit",
+  "created_at": "2026-06-29T19:35:29.981462Z",
+  "branch": "main",
+  "checkpoints_count": 6,
+  "files_touched": [
+    "docs/superpowers/specs/2026-06-29-tetris-design.md"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-4-6",
+  "turn_id": "fb84830ffc37",
+  "token_usage": {
+    "input_tokens": 37,
+    "cache_creation_tokens": 20272,
+    "cache_read_tokens": 601074,
+    "output_tokens": 7434,
+    "api_call_count": 17
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01Kf99ChMbTRzQQ1GmEtUbzZ",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:brainstorming"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "fb84830ffc37",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 17,
+        "end": 18,
+        "entry_ids": [
+          "417040fd-f737-4662-9734-ba792f16b0bf"
+        ],
+        "tool_use_id": "toolu_01Kf99ChMbTRzQQ1GmEtUbzZ"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01Kf99ChMbTRzQQ1GmEtUbzZ"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:brainstorming",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 6
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-06-29T19:35:29.977576Z",
+    "agent_lines": 158,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 158,
+    "total_lines_changed": 158,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    }
+  ]
+}

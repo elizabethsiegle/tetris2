@@ -1,0 +1,53 @@
+Build a complete, playable Tetris game as a React component styled with Tailwind. Set it up as a runnable project (Vite + React + Tailwind) and tell me the commands to install and run it.
+
+Core requirements:
+- Standard 10x20 grid playfield
+- All 7 tetromino pieces (I, O, T, S, Z, J, L) with their correct colors
+- Random piece generation using a 7-bag randomizer
+- Piece movement: left, right, soft drop, hard drop
+- Rotation with basic wall kicks (SRS-style is fine)
+- Line clearing (single/double/triple/tetris) with the rows above shifting down
+- Gravity that speeds up as the level increases
+- Game over when a new piece can't spawn
+
+UI:
+- Score, level, and lines-cleared display
+- "Next piece" preview
+- Pause (P) and restart (R) controls
+- A clear "Game Over" state with the final score
+
+Controls:
+- Left/Right arrows: move
+- Down arrow: soft drop
+- Up arrow or X: rotate
+- Spacebar: hard drop
+
+Scoring: standard Tetris scoring (more points for clearing multiple lines at once,
+scaled by level). Level up every 10 lines cleared.
+
+Make the code clean and commented. After building it, run it and confirm it works,
+then tell me how to open it.
+
+---
+
+yes
+
+---
+
+a
+
+---
+
+yes
+
+---
+
+yes
+
+---
+
+yes
+
+---
+
+yes
