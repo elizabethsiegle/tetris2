@@ -80,3 +80,54 @@ The change is fully spec-compliant.</result>
 ---
 
 2
+
+---
+
+lizziesiegle@Lizzies-MacBook-Pro tetrisidk % entire trail resume 1 --repo elizabethsiegle/tetris2 --branch add-a-purple-background-to-tetris
+Usage:
+  entire
+  entire [command]
+
+Available Commands:
+  activity               Show your activityoverview
+  agent                  Manage agent integrations (add, remove, list)
+  auth                   Manage authentication
+  checkpoint             Inspect and searchcheckpoints
+  clean                  Clean up Entire session data
+  configure              Update Entire settings in the current repository
+  disable                Disable Entire in current repository
+  dispatch               Generate a dispatch summarizing recent agent work
+  doctor                 Diagnose and fix session issues
+  enable                 Enable Entire in current repository
+  help                   Help about any command
+  labs                   Explore experimental Entire workflows
+  login                  Log in to Entire
+  logout                 Log out of Entire
+  plugin                 Manage Entire plugins (install, list, remove)
+  recap                  Summarize recent checkpoint activity
+  session                Manage agent sessions tracked by Entire
+  status                 Show Entire status
+  version                Show build information
+
+Use "entire [command] --help" for more information about a command.
+
+Error: Invalid usage: unknown flag: --repo
+
+---
+
+% entire trail resume 4 --repo elizabethsiegle/tetris2 --branch add-purple-background
+failed to resolve repository: get remote URL for "origin": remote "origin" not found
+
+---
+
+Fetching branch 'add-purple-background' from origin...
+✓ Switched to branch add-purple-background
+No Entire checkpoint found on branch 'add-purple-background'
+
+---
+
+a
+
+---
+
+yes
