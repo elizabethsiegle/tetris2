@@ -31,3 +31,6 @@ export const SCORE_TABLE = { 1: 100, 2: 300, 3: 500, 4: 800 };
 
 // Milliseconds between automatic gravity ticks
 export const gravityDelay = (level) => Math.max(100, 1000 - (level - 1) * 90);
+
+// Milliseconds a completed row flashes white before being removed
+export const FLASH_DURATION_MS = 400;
