@@ -1,0 +1,25 @@
+{
+  "id": "trail-semantic-diff",
+  "display_name": "Trail Semantic Diff",
+  "enabled": true,
+  "scope": "trail",
+  "runtime": {
+    "kind": "prompt_runner",
+    "agent": "claude",
+    "model": "sonnet",
+    "timeout_ms": 300000,
+    "sandbox": {
+      "repo_token": "read"
+    }
+  },
+  "prompt": {
+    "template": "You are a code review narrator, explaining code changes to a human reader. Analyze the changes on branch \"{{branch}}\" compared to \"{{base_branch}}\" and turn them into a concise, structured Semantic Diff view.\n\nRun these commands:\n\n1. git log origin/{{base_branch}}..HEAD --oneline\n2. git diff origin/{{base_branch}}...HEAD --stat\n3. git diff origin/{{base_branch}}...HEAD\n\nYour job:\n- Identify the main architectural or behavioral themes in the branch\n- Break the branch into 2-5 ordered pages\n- For each page, group the most important changed files into 1-3 sections\n- Prefer the most important changes over exhaustive coverage\n- Write concise, factual page summaries and section descriptions grounded in the diff\n- Do not include files that are not relevant to that page's narrative\n\nOutput ONLY this JSON object as the very last line:\n\n{\"title\":\"<short title>\",\"summary\":\"<1-2 sentence branch summary>\",\"pages\":[{\"page_number\":1,\"title\":\"<page title>\",\"summary\":\"<page summary>\",\"sections\":[{\"title\":\"<section title>\",\"description\":\"<brief explanation>\",\"files\":[\"path/to/file.ts\"]}]}]}\n\nExample:\n{\"title\":\"Unified hook lifecycle\",\"summary\":\"This branch consolidates hook handling into shared lifecycle plumbing and adapts the agent implementations to the new contract.\",\"pages\":[{\"page_number\":1,\"title\":\"Creating a unified hook entrypoint\",\"summary\":\"Hook registration now resolves the active agent, normalizes hook input, and dispatches through shared lifecycle handling.\",\"sections\":[{\"title\":\"Registry and dispatch\",\"description\":\"The hook registry stops containing per-agent handler maps and forwards through one shared path.\",\"files\":[\"cmd/entire/cli/hook_registry.go\",\"cmd/entire/cli/hooks.go\"]}]}]}\n\nIf the diff is too small to support multiple pages, return 1-2 high-signal pages instead. The final line must be valid JSON and must match the schema exactly."
+  },
+  "select": {
+    "trigger_types": ["api"]
+  },
+  "output": {
+    "adapter": "last_json_line",
+    "result_type": "trail_semantic_diff"
+  }
+}
