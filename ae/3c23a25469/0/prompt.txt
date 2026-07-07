@@ -1,0 +1,5 @@
+Add a "game over" screen with the final score and Add a "next piece" preview panel and Make completed lines flash before they clear
+
+---
+
+nothing
