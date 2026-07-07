@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 import { gameReducer, INITIAL_STATE } from '../gameReducer.js';
 import { useGameLoop } from '../hooks/useGameLoop.js';
 import { useInput } from '../hooks/useInput.js';
+import { useLineClearTimer } from '../hooks/useLineClearTimer.js';
 import Board from './Board.jsx';
 import Sidebar from './Sidebar.jsx';
 
@@ -24,10 +25,11 @@ function StatRow({ label, value }) {
 
 export default function Tetris() {
   const [state, dispatch] = useReducer(gameReducer, INITIAL_STATE);
-  const { board, activePiece, ghostY, nextPiece, score, level, lines, phase } = state;
+  const { board, activePiece, ghostY, nextPiece, score, level, lines, phase, clearingRows } = state;
 
   useGameLoop(dispatch, phase, level);
   useInput(dispatch);
+  useLineClearTimer(dispatch, phase, clearingRows);
 
   return (
     <div className="flex gap-8 items-start select-none">
@@ -40,7 +42,7 @@ export default function Tetris() {
 
       {/* Board with overlays */}
       <div className="relative">
-        <Board board={board} activePiece={activePiece} ghostY={ghostY} />
+        <Board board={board} activePiece={activePiece} ghostY={ghostY} clearingRows={clearingRows} />
 
         {phase === 'idle' && (
           <Overlay>
