@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.8.1",
+  "checkpoint_id": "b401a68cc2ea",
+  "strategy": "manual-commit",
+  "branch": "add-a-footer-saying-made-w-3-at-the-bottom-of-th",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "src/App.jsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/b4/01a68cc2ea/0/metadata.json",
+      "transcript": "/b4/01a68cc2ea/0/full.jsonl",
+      "compact_transcript": "/b4/01a68cc2ea/0/transcript.jsonl",
+      "content_hash": "/b4/01a68cc2ea/0/content_hash.txt",
+      "prompt": "/b4/01a68cc2ea/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 7188,
+    "cache_creation_tokens": 14120,
+    "cache_read_tokens": 102008,
+    "output_tokens": 572,
+    "api_call_count": 3
+  }
+}

@@ -1,0 +1,1 @@
+add a sticky footer at the bottom of the webpage that says "made w/ <3 in sf"
