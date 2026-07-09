@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.8.1",
+  "checkpoint_id": "4689b3605394",
+  "strategy": "manual-commit",
+  "branch": "change-background-to-purple",
+  "checkpoints_count": 3,
+  "files_touched": [
+    "src/App.jsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/46/89b3605394/0/metadata.json",
+      "transcript": "/46/89b3605394/0/full.jsonl",
+      "compact_transcript": "/46/89b3605394/0/transcript.jsonl",
+      "content_hash": "/46/89b3605394/0/content_hash.txt",
+      "prompt": "/46/89b3605394/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 325,
+    "cache_creation_tokens": 37349,
+    "cache_read_tokens": 1029438,
+    "output_tokens": 3042,
+    "api_call_count": 18
+  }
+}
