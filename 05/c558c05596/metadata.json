@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.8.1",
+  "checkpoint_id": "05c558c05596",
+  "strategy": "manual-commit",
+  "branch": "deploy-to-cloudflare-workers",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "src/App.jsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/05/c558c05596/0/metadata.json",
+      "transcript": "/05/c558c05596/0/full.jsonl",
+      "compact_transcript": "/05/c558c05596/0/transcript.jsonl",
+      "content_hash": "/05/c558c05596/0/content_hash.txt",
+      "prompt": "/05/c558c05596/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 7265,
+    "cache_creation_tokens": 16700,
+    "cache_read_tokens": 231849,
+    "output_tokens": 1004,
+    "api_call_count": 6
+  }
+}
