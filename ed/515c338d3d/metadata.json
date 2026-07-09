@@ -1,0 +1,26 @@
+{
+  "cli_version": "0.8.1",
+  "checkpoint_id": "ed515c338d3d",
+  "strategy": "manual-commit",
+  "branch": "make-background-pink",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "src/App.jsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/ed/515c338d3d/0/metadata.json",
+      "transcript": "/ed/515c338d3d/0/full.jsonl",
+      "compact_transcript": "/ed/515c338d3d/0/transcript.jsonl",
+      "content_hash": "/ed/515c338d3d/0/content_hash.txt",
+      "prompt": "/ed/515c338d3d/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 7273,
+    "cache_creation_tokens": 16450,
+    "cache_read_tokens": 401582,
+    "output_tokens": 1191,
+    "api_call_count": 10
+  }
+}
